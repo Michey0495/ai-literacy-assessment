@@ -168,11 +168,8 @@ export default function Home() {
       {/* フッター */}
       <footer className="editorial-border border-t-2 border-ink-black mt-16 py-8 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-editorial-xs text-gray-400 tracking-wide mb-2">
-            © 2025 AI Literacy Assessment. All rights reserved.
-          </p>
           <p className="text-editorial-xs text-gray-600 tracking-wide">
-            制作: <span className="font-bold">EZOAI</span>
+            <span className="font-bold">EZOAI</span> 作成
           </p>
         </div>
       </footer>

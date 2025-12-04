@@ -248,8 +248,8 @@ function ResultContent() {
         {/* フッター */}
         <footer className="mt-16 py-8 px-6 border-t border-gray-200">
           <div className="max-w-6xl mx-auto text-center">
-            <p className="text-editorial-xs text-gray-400 tracking-wide">
-              制作: <span className="font-bold text-gray-600">EZOAI</span>
+            <p className="text-editorial-xs text-gray-600 tracking-wide">
+              <span className="font-bold">EZOAI</span> 作成
             </p>
           </div>
         </footer>
