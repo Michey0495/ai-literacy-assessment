@@ -1,12 +1,12 @@
 'use client';
 
 import { useSearchParams, useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { questions } from '@/data/questions';
 import { AnswerLog, calculateScore, getFeedback } from '@/lib/utils';
 import CustomRadarChart from '@/components/RadarChart';
 
-export default function ResultPage() {
+function ResultContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [result, setResult] = useState<any>(null);
@@ -246,5 +246,20 @@ export default function ResultPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function ResultPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-paper-white flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-16 h-16 border-4 border-ink-black border-t-transparent animate-spin mx-auto mb-6"></div>
+          <p className="text-editorial-base text-gray-700">結果を読み込んでいます...</p>
+        </div>
+      </div>
+    }>
+      <ResultContent />
+    </Suspense>
   );
 }
